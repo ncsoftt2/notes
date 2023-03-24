@@ -1,0 +1,96 @@
+.todo_title.active{
+    text-decoration: line-through;
+    opacity: .2;
+}
+
+.todo_title {
+    width: 600px;
+    overflow-wrap: break-word;
+}
+
+.todo_list_item{
+    display:flex;
+    justify-content: space-between;
+    border:1px solid #cccccc;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 15px;
+    color: #232323;
+    font-size: 18px;
+}
+
+.todo_list_item:last-child{
+    margin-bottom: 0px;
+}
+.todo_list_item:hover{
+    border:1px solid black;
+}
+
+.btn_delete{
+    color:white;
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border:none;
+    background-color: #ff6a6a;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.btn_delete:hover{
+    transform: scale(1.1);
+    background-color: #ff3e3e;
+}
+
+.btn_change{
+    border:none;
+    font-size: 16px;
+    border-radius: 30px;
+    background-color: greenyellow;
+    width: 30px;
+    height: 30px;
+}
+
+.todo_list_edit{
+    display:flex;
+    align-items: center;
+}
+
+.todo_edit_input{
+    margin-right: 15px;
+}
+
+.todo_edit_input input{
+    font-size: 16px;
+    width: 350px;
+    border:1px solid rgba(42, 100, 126, 0.29);
+    border-radius: 4px;
+    padding: 5px;
+    outline: none;
+
+}
+
+.todo_edit_checkbox input{
+    width: 25px;
+    height: 25px;
+}
+
+.todo_list_img img{
+    width: 100px;
+    height: 100px;
+}
+
+.btn-save{
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #6fb3ff;
+    color:white;
+    cursor: pointer;
+}
+
+.btn-save:hover{
+    background-color: #3e98ff;
+}

@@ -1,0 +1,35 @@
+.input_block{
+    display:flex;
+    align-items: center;
+    text-align: center;
+}
+
+.input_block input{
+    width: 400px;
+    outline: none;
+    padding: 10px 5px;
+    font-size: 20px;
+    color: #2f2f2f;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+    margin-right: 25px;
+}
+
+.input_block input::placeholder{
+    opacity: .7;
+}
+
+.btn_add_todo{
+    width: 35px;
+    height: 35px;
+    border:1px solid #d7d7d7;
+    color: #d7d7d7;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 25px;
+    cursor: pointer;
+}
+.btn_add_todo:hover{
+    border:2px solid #ffffff;
+    color:white;
+}

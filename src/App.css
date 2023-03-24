@@ -1,0 +1,15 @@
+.app{
+    margin:20px auto;
+    width: 1000px;
+}
+
+.todo_items{
+    border:1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+    padding: 20px;
+    background-color: #1053a1;
+}
