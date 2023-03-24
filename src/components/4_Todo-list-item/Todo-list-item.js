@@ -12,7 +12,7 @@ const TodoListItem = (props) => {
         setIncrease(props.increase)
     },[props.title,props.increase])
 
-    const [increase,setIncrease] = useState(props.increase)
+    const [completed,setCompleted] = useState(props.completed)
     const [title,setTodoTitle] = useState(props.title)
     const date = useState(props.date)
 
@@ -62,7 +62,7 @@ const TodoListItem = (props) => {
                             <input type='text' value={title} onChange={(e) => setTodoTitle(e.currentTarget.value)} autoFocus={true}/>
                         </div>
                         <div className={'todo_edit_checkbox'}>
-                            <input type='checkbox' value={increase} checked={increase} onChange={() => setIncrease(!increase)}/>
+                            <input type='checkbox' value={completed} checked={completed} onChange={() => setIncrease(!completed)}/>
                         </div>
                     </div>
                     <div>
