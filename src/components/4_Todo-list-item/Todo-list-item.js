@@ -9,8 +9,8 @@ const TodoListItem = (props) => {
 
     useEffect(() => {
         setTodoTitle(props.title)
-        setIncrease(props.increase)
-    },[props.title,props.increase])
+        setCompleted(props.completed)
+    },[props.title,props.completed])
 
     const [completed,setCompleted] = useState(props.completed)
     const [title,setTodoTitle] = useState(props.title)
@@ -21,7 +21,7 @@ const TodoListItem = (props) => {
     const dispatch = useDispatch();
 
     const todoUpdate = async() => {
-        let item = {title,increase,date}
+        let item = {title,completed,date}
         await request(`http://localhost:3000/todo/${props.id}`,
             "PUT",
             JSON.stringify(item),
@@ -41,7 +41,7 @@ const TodoListItem = (props) => {
         todoUpdate()
     }
     let classNames = 'todo_title '
-    if(increase) {
+    if(completed) {
         classNames += 'active '
     }
 
@@ -62,7 +62,7 @@ const TodoListItem = (props) => {
                             <input type='text' value={title} onChange={(e) => setTodoTitle(e.currentTarget.value)} autoFocus={true}/>
                         </div>
                         <div className={'todo_edit_checkbox'}>
-                            <input type='checkbox' value={completed} checked={completed} onChange={() => setIncrease(!completed)}/>
+                            <input type='checkbox' value={completed} checked={completed} onChange={() => setCompleted(!completed)}/>
                         </div>
                     </div>
                     <div>
