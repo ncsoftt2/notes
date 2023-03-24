@@ -36,7 +36,7 @@ const TodoList = (props) => {
             }
         }
     )
-    const filteredTodoNorm = useSelector(filterTodo)
+    const filteredTodoList = useSelector(filterTodo)
     if(todoLoadingStatus === 'loading') {
         return <div className={'loading_status'}><Spinner /></div>
     }
@@ -72,7 +72,7 @@ const TodoList = (props) => {
         )
     }
 
-    const elements = renderItems(filteredTodoNorm)
+    const elements = renderItems(filteredTodoList)
     return (
         <div>
             <div className={'search_input'}>
